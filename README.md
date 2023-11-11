@@ -6,7 +6,7 @@ Rohit Raj - 21110179
 
 ### PART 1 (Mininet Implementation)
 
-Implementation:
+**Implementation:**
 After saving the python script for the topology, open the terminal and follow the steps:
 1. Run the python script: sudo python myNet.py
 2. Write this command on mininet console and press enter: h3 tcpdump -n -i h3-eth0
@@ -15,16 +15,20 @@ After saving the python script for the topology, open the terminal and follow th
 
 where, 172.16.0.100 is the IP addr for h3
 
-Observation:
+**Observation:**
 1. On mininet console: xterm ra
 2. On xterm (ra) window: wireshark &
 3. On mininet console: xterm h1
 4. On xterm (h1) window: ping -c 3 172.16.0.100
 
 which means h2 is pinged from h1 and packets travel via router 'ra' which is captured and shown on wireshark
-Results are shown in write-up
+Results are shown in write-up.
 
-Dumb the routing tables:
+**Vary the default routing:**
+We tries changing route for h1 to h6 by changing the ra and rc connections, but it didn't work (Destination not reachable). 
+You may check the code in the file: testDiffRoutes.py
+
+**Dumb the routing tables:**
 To obtain the routing table for router 'ra', command to be run on mininet console: ra ip route
 
 =================================
