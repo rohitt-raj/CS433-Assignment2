@@ -31,7 +31,7 @@ Results are shown in write-up.
 We tries changing route for h1 to h6 by changing the ra and rc connections, but it didn't work (Destination not reachable). 
 You may check the code in the file: testDiffRoutes.py
 
-**Dumb the routing tables:**
+**Dump the routing tables:**
 
 To obtain the routing table for router 'ra', command to be run on mininet console: ra ip route
 
